@@ -24,20 +24,18 @@ chmod +x remotecontrol.sh
 2. Install Dependencies
 The script automatically installs required dependencies, but you can manually install them:
 
-bash
-Copy
-Edit
+```bash
 sudo apt update
 sudo apt install sshpass curl nmap whois perl -y
 git clone https://github.com/htrgouvea/nipe .nipe
 cd .nipe
 sudo perl nipe.pl start
+
 🚀 Usage
 Run the Script
-bash
-Copy
-Edit
+```bash
 sudo ./remotecontrol.sh
+
 ⚠ This script must be run as root because Nipe requires privileged access.
 
 Step-by-Step Execution
@@ -64,10 +62,9 @@ By default, the script prompts you to specify an output directory.
 🔹 Issue: "Nipe failed to activate"
 ✅ Ensure you have perl installed and run:
 
-bash
-Copy
-Edit
+```bash
 cd .nipe && sudo perl nipe.pl install && sudo perl nipe.pl start
+
 🔹 Issue: "Could not resolve host" while cloning GitHub repo
 ✅ Check your internet connection or try changing your DNS to Google:
 
@@ -76,12 +73,10 @@ Copy
 Edit
 sudo nano /etc/resolv.conf
 Add:
-
-nginx
-Copy
-Edit
+```bash
 nameserver 8.8.8.8
 nameserver 8.8.4.4
+
 Save and restart networking.
 
 📜 License
