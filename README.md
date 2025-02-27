@@ -1,5 +1,5 @@
 # Remote-Control
-# 🚀 Remote Control & Anonymized Network Reconnaissance Script
+#  🚀 Remote Control & Anonymized Network Reconnaissance Script
 
 ## 📌 Overview
 This **Bash script** automates **remote reconnaissance** while ensuring **anonymity** using `Nipe` (Tor-based traffic routing).  
@@ -9,41 +9,44 @@ It performs **dependency installation, anonymity verification, remote command ex
 ✔ **Automated Dependency Installation** – Installs `sshpass`, `curl`, `nmap`, `whois`, `perl` if not already installed.  
 ✔ **Ensures Anonymity with Nipe** – Routes traffic through Tor before scanning.  
 ✔ **Remote Reconnaissance via SSH** – Connects to a remote server, executes commands, and retrieves results.  
-✔ **Data Collection & Logging** – Stores Whois & Nmap results in a user-defined directory.  
+✔ **Data Collection & Logging** – Stores **Whois & Nmap results** in a user-defined directory.  
 ✔ **Secure Cleanup** – Deletes temporary files from the remote machine after execution.  
 
 ---
 
 ## 🛠️ Installation & Setup
 
-### **1️⃣ Clone the Repository**
+### **1. Clone the Repository**
 ```bash
-git clone https://github.com/Remote-Control.git
+git clone https://github.com/your-repo-name.git
 cd ./Remote-Control
 chmod +x remotecontrol.sh
-2️⃣ Install Dependencies
-The script automatically installs required dependencies.
-You can manually install them using:
+2. Install Dependencies
+The script automatically installs required dependencies, but you can manually install them:
+
+bash
+Copy
+Edit
 sudo apt update
 sudo apt install sshpass curl nmap whois perl -y
 git clone https://github.com/htrgouvea/nipe .nipe
 cd .nipe
-sudo perl nipe.pl start 
-
-🚀 Usage:
-sudo su root
-bash ./remotecontrol.sh
-
+sudo perl nipe.pl start
+🚀 Usage
+Run the Script
+bash
+Copy
+Edit
+sudo ./remotecontrol.sh
 ⚠ This script must be run as root because Nipe requires privileged access.
 
 Step-by-Step Execution
-1️⃣ Checks if running as root (exits if not).
-2️⃣ Installs necessary tools (sshpass, curl, nmap, whois, perl).
-3️⃣ Ensures anonymity using Nipe (Tor-based traffic routing).
-4️⃣ Prompts for remote server details (IP, username, password, target address).
-5️⃣ Executes Whois and Nmap scans on the target from the remote machine.
-6️⃣ Retrieves and saves results in a user-defined directory.
-
+Checks if running as root (exits if not).
+Installs necessary tools (sshpass, curl, nmap, whois, perl).
+Ensures anonymity using Nipe (Tor-based traffic routing).
+Prompts for remote server details (IP, username, password, target address).
+Executes Whois and Nmap scans on the target from the remote machine.
+Retrieves and saves results in a user-defined directory.
 📂 Output & Logs
 The script saves execution logs and collected data in an output directory:
 
@@ -58,15 +61,25 @@ By default, the script prompts you to specify an output directory.
 🚨 The author is not responsible for any misuse of this tool.
 
 🛠️ Troubleshooting
-
 🔹 Issue: "Nipe failed to activate"
 ✅ Ensure you have perl installed and run:
-cd .nipe && sudo perl nipe.pl install && sudo perl nipe.pl start
 
+bash
+Copy
+Edit
+cd .nipe && sudo perl nipe.pl install && sudo perl nipe.pl start
 🔹 Issue: "Could not resolve host" while cloning GitHub repo
 ✅ Check your internet connection or try changing your DNS to Google:
+
+bash
+Copy
+Edit
 sudo nano /etc/resolv.conf
-and add
+Add:
+
+nginx
+Copy
+Edit
 nameserver 8.8.8.8
 nameserver 8.8.4.4
 Save and restart networking.
