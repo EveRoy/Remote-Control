@@ -1,5 +1,5 @@
 # Remote-Control
-#  🚀 Remote Control & Anonymized Network Reconnaissance Script
+# 🚀 Remote Control & Anonymized Network Reconnaissance Script
 
 ## 📌 Overview
 This **Bash script** automates **remote reconnaissance** while ensuring **anonymity** using `Nipe` (Tor-based traffic routing).  
@@ -21,20 +21,23 @@ It performs **dependency installation, anonymity verification, remote command ex
 git clone https://github.com/your-repo-name.git
 cd ./Remote-Control
 chmod +x remotecontrol.sh
+```
+
 2. Install Dependencies
 The script automatically installs required dependencies, but you can manually install them:
-
 ```bash
 sudo apt update
 sudo apt install sshpass curl nmap whois perl -y
 git clone https://github.com/htrgouvea/nipe .nipe
 cd .nipe
 sudo perl nipe.pl start
+```
 
 🚀 Usage
 Run the Script
 ```bash
 sudo ./remotecontrol.sh
+```
 
 ⚠ This script must be run as root because Nipe requires privileged access.
 
@@ -61,22 +64,19 @@ By default, the script prompts you to specify an output directory.
 🛠️ Troubleshooting
 🔹 Issue: "Nipe failed to activate"
 ✅ Ensure you have perl installed and run:
-
 ```bash
 cd .nipe && sudo perl nipe.pl install && sudo perl nipe.pl start
-
+```
 🔹 Issue: "Could not resolve host" while cloning GitHub repo
 ✅ Check your internet connection or try changing your DNS to Google:
-
-bash
-Copy
-Edit
+```bash
 sudo nano /etc/resolv.conf
+```
 Add:
 ```bash
 nameserver 8.8.8.8
 nameserver 8.8.4.4
-
+```
 Save and restart networking.
 
 📜 License
@@ -84,3 +84,4 @@ This project is licensed under the MIT License – you are free to use and modif
 
 ✨ Author
 👤 EvaRoy
+
