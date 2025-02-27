@@ -18,7 +18,7 @@ It performs **dependency installation, anonymity verification, remote command ex
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/your-repo-name.git
+git clone https://github.com/Remote-Control.git
 cd ./Remote-Control
 chmod +x remotecontrol.sh
 ```
